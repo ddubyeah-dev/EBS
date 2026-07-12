@@ -1,0 +1,68 @@
+[
+  {
+    "id": "ebs_mod_portal_sheath",
+    "name": "Portal Sheath",
+    "source": "EBS",
+    "license_id": "ebs_frame_gallowglass",
+    "license_level": 2,
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 4
+      },
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "allowed_types": [
+      "Melee"
+    ],
+    "description": "A sheath that opens onto elsewhere.",
+    "effect": "The wielder can make a Melee attack with this weapon against a target within Sensors, but that attack cannot benefit from any Talents.",
+    "license": "GALLOWGLASS"
+  },
+  {
+    "id": "ebs_mod_corona_coil",
+    "name": "Corona Coil",
+    "source": "EBS",
+    "license_id": "ebs_frame_varangi",
+    "license_level": 2,
+    "sp": 3,
+    "allowed_types": [
+      "Melee"
+    ],
+    "description": "This system allows a melee weapon to be fed power directly from a frame's reactor.",
+    "effect": "Activated as a Quick Tech: while active, this weapon is wreathed in energy, changing its damage type to Energy and giving it the Overkill quality.",
+    "actions": [
+      {
+        "name": "Activate Corona Coil",
+        "activation": "Quick Tech",
+        "detail": "While active, this weapon is wreathed in energy, changing its damage type to Energy and giving it the Overkill quality."
+      }
+    ],
+    "license": "VARANGI"
+  },
+  {
+    "id": "ebs_mod_chain_capacitor",
+    "name": "Chain Capacitor",
+    "source": "EBS",
+    "license_id": "ebs_frame_ikki",
+    "license_level": 1,
+    "sp": 1,
+    "description": "A capacitor bank that arcs stored charge between adjacent targets.",
+    "effect": "When activated, your frame takes 1 Heat. When you deal damage to an enemy with this weapon, the damage can be split among the target and adjacent units, as evenly as possible.",
+    "license": "IKKI"
+  },
+  {
+    "id": "ebs_mod_drone_target_assist",
+    "name": "Drone Target Assist",
+    "source": "EBS",
+    "license_id": "ebs_frame_medjay",
+    "license_level": 2,
+    "sp": 2,
+    "description": "Deployable-fed targeting telemetry.",
+    "effect": "This weapon gains +1 Accuracy when attacking targets adjacent to one of your deployables.",
+    "license": "MEDJAY"
+  }
+]

@@ -1,0 +1,588 @@
+[
+  {
+    "id": "ebs_sys_caber_demolitions",
+    "name": "CABER System Demolitions",
+    "source": "EBS",
+    "license_id": "ebs_frame_gallowglass",
+    "license_level": 1,
+    "type": "Deployable",
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 2
+      }
+    ],
+    "description": "A demolitions suite of thrown charges and area-denial mines.",
+    "effect": "This system can be used to throw a Stone Grenade or deploy a Thumper Mine.",
+    "actions": [
+      {
+        "name": "Stone Grenade",
+        "activation": "Quick",
+        "detail": "Deal 3 AP Kinetic to the target and 5 Explosive in Blast 1.<br>Affected characters may attempt a <b>Hull Save</b> to reduce the damage of either type by 2.",
+        "cost": 1,
+        "damage": [
+          {
+            "type": "Kinetic",
+            "val": 3
+          },
+          {
+            "type": "Explosive",
+            "val": 5
+          }
+        ]
+      }
+    ],
+    "deployables": [
+      {
+        "name": "Thumper Mine",
+        "type": "Mine",
+        "activation": "Quick",
+        "detail": "Characters within Burst 2 of the mine cannot be Hidden until they move out of the affected area.",
+        "cost": 1
+      }
+    ],
+    "license": "GALLOWGLASS"
+  },
+  {
+    "id": "ebs_sys_targeting_reflex_wiring",
+    "name": "Targeting Reflex Wiring",
+    "source": "EBS",
+    "license_id": "ebs_frame_gallowglass",
+    "license_level": 2,
+    "sp": 3,
+    "effect": "You can use Overwatch reactions on enemies that move through your Threat.",
+    "license": "GALLOWGLASS"
+  },
+  {
+    "id": "ebs_sys_retaliation",
+    "name": "Retaliation System",
+    "source": "EBS",
+    "license_id": "ebs_frame_gallowglass",
+    "license_level": 3,
+    "sp": 3,
+    "tags": [
+      {
+        "id": "tg_unique"
+      }
+    ],
+    "effect": "Gain the Blood for Blood reaction.",
+    "actions": [
+      {
+        "name": "Blood for Blood",
+        "activation": "Reaction",
+        "frequency": "1/round",
+        "trigger": "A character within the Threat of any of your weapons deals damage to you.",
+        "detail": "You may Skirmish against the triggering character."
+      }
+    ],
+    "license": "GALLOWGLASS"
+  },
+  {
+    "id": "ebs_sys_motor_override",
+    "name": "Motor Override",
+    "source": "EBS",
+    "license_id": "ebs_frame_varangi",
+    "license_level": 1,
+    "type": "Tech",
+    "sp": 2,
+    "effect": "Gain the Motor Override Full Tech action.",
+    "actions": [
+      {
+        "name": "Motor Override",
+        "activation": "Full Tech",
+        "detail": "The target must pass a Hull Save. If it fails, it can only take movement toward you until it passes a Hull Save as a Full Action."
+      }
+    ],
+    "license": "VARANGI"
+  },
+  {
+    "id": "ebs_sys_reflex_shield",
+    "name": "Reflex Shield",
+    "source": "EBS",
+    "license_id": "ebs_frame_varangi",
+    "license_level": 2,
+    "type": "Shield",
+    "sp": 2,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 6
+      }
+    ],
+    "effect": "Gain the Reflex Shield reaction. A character may only benefit from this system 1/Turn.",
+    "actions": [
+      {
+        "name": "Reflex Shield",
+        "activation": "Reaction",
+        "frequency": "1/round",
+        "trigger": "An ally within Sensors is about to take damage.",
+        "detail": "Grant the triggering ally Resistance to one damage type for the round. A character may only benefit from this system 1/Turn.",
+        "cost": 1
+      }
+    ],
+    "license": "VARANGI"
+  },
+  {
+    "id": "ebs_sys_hanaphu_nhp",
+    "name": "Hanaphu NHP",
+    "source": "EBS",
+    "license_id": "ebs_frame_varangi",
+    "license_level": 3,
+    "type": "AI",
+    "sp": 3,
+    "tags": [
+      {
+        "id": "tg_ai"
+      }
+    ],
+    "effect": "Your mech gains the AI tag and the Xbalanque protocol.",
+    "actions": [
+      {
+        "name": "Xbalanque",
+        "activation": "Protocol",
+        "detail": "Until the end of your next turn, Hanaphu takes control of a Superheavy Melee weapon equipped on your mech, giving it +2 Threat and Arcing. While Hanaphu has control you may not make other attacks with this weapon. Hanaphu makes one attack with it as a free action on your turn while this Protocol is active, and has Overwatch."
+      }
+    ],
+    "license": "VARANGI"
+  },
+  {
+    "id": "ebs_sys_static_net",
+    "name": "Static Net",
+    "source": "EBS",
+    "license_id": "ebs_frame_purbiya",
+    "license_level": 1,
+    "type": "Tech",
+    "sp": 1,
+    "effect": "Gain the Static Net Quick Tech action.",
+    "actions": [
+      {
+        "name": "Static Net",
+        "activation": "Quick Tech",
+        "detail": "Choose a point within Sensors: deployables in Blast 2 must pass a <b>Tech Save</b> or be <b>Stunned</b> until the end of your next turn.",
+        "add_status": [
+          {
+            "id": "stunned",
+            "save": "sys",
+            "aoe": "blast 2",
+            "duration": "next_turn_end_self"
+          }
+        ]
+      }
+    ],
+    "license": "PURBIYA"
+  },
+  {
+    "id": "ebs_sys_screecher_drone",
+    "name": "SCREECHER Drone",
+    "source": "EBS",
+    "license_id": "ebs_frame_purbiya",
+    "license_level": 2,
+    "type": "Drone",
+    "sp": 2,
+    "effect": "Deploy the SCREECHER to a free space within Sensors.",
+    "deployables": [
+      {
+        "name": "SCREECHER",
+        "type": "Drone",
+        "size": 0.5,
+        "hp": 10,
+        "evasion": 10,
+        "edef": 10,
+        "activation": "Quick",
+        "redeploy": "Quick",
+        "detail": "The SCREECHER produces a sonic and subsonic screech in Burst 1: it prevents any form of communication within the area and inflicts -2 to Tech and Hull Saves within Burst 1."
+      }
+    ],
+    "license": "PURBIYA"
+  },
+  {
+    "id": "ebs_sys_shadow_network",
+    "name": "Shadow Network",
+    "source": "EBS",
+    "license_id": "ebs_frame_purbiya",
+    "license_level": 3,
+    "sp": 3,
+    "effect": "Gain the Shadow Network protocol.",
+    "actions": [
+      {
+        "name": "Shadow Network",
+        "activation": "Protocol",
+        "detail": "All deployables you have active within Sensors become Invisible.",
+        "add_status": [
+          {
+            "id": "invisible",
+            "target": "ally",
+            "aoe": true
+          }
+        ]
+      }
+    ],
+    "license": "PURBIYA"
+  },
+  {
+    "id": "ebs_sys_self_destruct_code",
+    "name": "Self-Destruct Code",
+    "source": "EBS",
+    "license_id": "ebs_frame_myroi",
+    "license_level": 1,
+    "type": "Tech",
+    "sp": 1,
+    "effect": "Drones deployed by a mech with this system can be detonated as a Quick Tech action.",
+    "actions": [
+      {
+        "name": "Detonate Drone",
+        "activation": "Quick Tech",
+        "detail": "A drone you have deployed detonates, dealing 1d6 AP Explosive in Burst 1, and is Destroyed.",
+        "damage": [
+          {
+            "type": "Explosive",
+            "val": "1d6"
+          }
+        ]
+      }
+    ],
+    "license": "MYROI"
+  },
+  {
+    "id": "ebs_sys_lift_drone",
+    "name": "Lift Drone",
+    "source": "EBS",
+    "license_id": "ebs_frame_myroi",
+    "license_level": 1,
+    "type": "Drone",
+    "sp": 2,
+    "effect": "Deploy the Lift Drone to grant temporary flight to an ally.",
+    "deployables": [
+      {
+        "name": "Lift Drone",
+        "type": "Drone",
+        "size": 0.5,
+        "hp": 10,
+        "evasion": 10,
+        "edef": 10,
+        "activation": "Quick",
+        "redeploy": "Quick",
+        "detail": "Grants temporary flight to an adjacent ally until the end of that ally's next turn."
+      }
+    ],
+    "license": "MYROI"
+  },
+  {
+    "id": "ebs_sys_liquid_metal_subalterns",
+    "name": "Liquid Metal Subalterns",
+    "source": "EBS",
+    "license_id": "ebs_frame_myroi",
+    "license_level": 2,
+    "type": "Drone",
+    "sp": 3,
+    "effect": "As a Quick Tech, these subalterns can be deployed to a free space within Sensors.",
+    "actions": [
+      {
+        "name": "Attach",
+        "activation": "Quick Tech",
+        "detail": "A Liquid Metal Subaltern attaches to a target, which must pass a Hull Save or become Slowed.",
+        "add_status": [
+          {
+            "id": "slow",
+            "save": "hull"
+          }
+        ]
+      },
+      {
+        "name": "Caltrop",
+        "activation": "Quick Tech",
+        "detail": "A Liquid Metal Subaltern spreads into jagged forms, turning its space and adjacent spaces into Dangerous Terrain."
+      }
+    ],
+    "license": "MYROI"
+  },
+  {
+    "id": "ebs_sys_cognition_riddle",
+    "name": "Cognition Riddle",
+    "source": "EBS",
+    "license_id": "ebs_frame_myroi",
+    "license_level": 3,
+    "type": "Tech",
+    "sp": 2,
+    "effect": "Gain the Cognition Riddle Full Tech action.",
+    "actions": [
+      {
+        "name": "Cognition Riddle",
+        "activation": "Full Tech",
+        "detail": "An enemy within Sensors must pass a Tech Save or be unable to target any deployables until the end of its next turn.",
+        "add_special": [
+          {
+            "attribute": "Cognition Riddled",
+            "detail": "You cannot target any deployables until the end of your next turn.",
+            "duration": "next_turn_end_target",
+            "target": "enemy"
+          }
+        ]
+      }
+    ],
+    "license": "MYROI"
+  },
+  {
+    "id": "ebs_sys_ant_subalterns",
+    "name": "A.N.T. Subalterns",
+    "source": "EBS",
+    "license_id": "ebs_frame_myroi",
+    "license_level": 3,
+    "type": "Drone",
+    "sp": 4,
+    "effect": "Deploy drones within Sensors that burrow and become Hidden. As a Quick Tech, direct them to Tunnel, Sink, or Rearrange mines.",
+    "actions": [
+      {
+        "name": "Direct A.N.T.s",
+        "activation": "Quick Tech",
+        "detail": "Direct the A.N.T. Subalterns to Tunnel, Sink, or Rearrange mines."
+      }
+    ],
+    "license": "MYROI"
+  },
+  {
+    "id": "ebs_sys_web_demolitions",
+    "name": "WEB Demolitions System",
+    "source": "EBS",
+    "license_id": "ebs_frame_ikki",
+    "license_level": 1,
+    "type": "Deployable",
+    "sp": 0,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      }
+    ],
+    "description": "Entangling demolition charges in grenade and mine configurations.",
+    "effect": "This system can be used to throw a WEB Grenade or deploy a WEB Mine.",
+    "actions": [
+      {
+        "name": "WEB Grenade",
+        "activation": "Quick",
+        "detail": "Deal 3 Energy damage.<br>The target must pass a <b>Hull Save</b> or become <b>Slowed</b>.",
+        "cost": 1,
+        "damage": [
+          {
+            "type": "Energy",
+            "val": 3
+          }
+        ],
+        "add_status": [
+          {
+            "id": "slow",
+            "save": "hull"
+          }
+        ]
+      }
+    ],
+    "deployables": [
+      {
+        "name": "WEB Mine",
+        "type": "Mine",
+        "activation": "Quick",
+        "detail": "The triggering character must pass a Hull Save or become Immobilized until it passes a Hull Save as a Full Action.",
+        "cost": 1
+      }
+    ],
+    "license": "IKKI"
+  },
+  {
+    "id": "ebs_sys_heat_integrator",
+    "name": "Heat Integrator",
+    "source": "EBS",
+    "license_id": "ebs_frame_ikki",
+    "license_level": 2,
+    "type": "Tech",
+    "sp": 3,
+    "effect": "Gain the Heat Integrator Quick Tech action.",
+    "actions": [
+      {
+        "name": "Heat Integrator",
+        "activation": "Quick Tech",
+        "detail": "Make a tech attack against a target within Sensors. On a success, transfer 1 Heat from the target to the IKKI."
+      }
+    ],
+    "license": "IKKI"
+  },
+  {
+    "id": "ebs_sys_entropic_shift",
+    "name": "Entropic Shift System",
+    "source": "EBS",
+    "license_id": "ebs_frame_ikki",
+    "license_level": 3,
+    "sp": 2,
+    "effect": "Gain the Entropic Shift reaction.",
+    "actions": [
+      {
+        "name": "Entropic Shift",
+        "activation": "Reaction",
+        "frequency": "1/round",
+        "trigger": "An opposed test is triggered within Sensors.",
+        "detail": "Switch the rolls of an ally and opponent in the opposed test. You must declare this reaction before the dice are rolled."
+      }
+    ],
+    "license": "IKKI"
+  },
+  {
+    "id": "ebs_sys_pythagoras_nhp",
+    "name": "Pythagoras NHP",
+    "source": "EBS",
+    "license_id": "ebs_frame_ikki",
+    "license_level": 3,
+    "type": "AI",
+    "sp": 3,
+    "tags": [
+      {
+        "id": "tg_ai"
+      }
+    ],
+    "effect": "Your mech gains the AI tag and the DYAD Full Tech action.",
+    "actions": [
+      {
+        "name": "DYAD",
+        "activation": "Full Tech",
+        "detail": "The Pythagoras NHP forces an enemy to face the concept of their other selves: their sensors read every enemy as a copy of themselves, causing them to gain +2 Difficulty on all hostile actions until the end of their next turn. Each enemy can only be affected by this effect once per scene."
+      }
+    ],
+    "license": "IKKI"
+  },
+  {
+    "id": "ebs_sys_perimeter",
+    "name": "Perimeter System",
+    "source": "EBS",
+    "license_id": "ebs_frame_medjay",
+    "license_level": 1,
+    "type": "Tech",
+    "sp": 1,
+    "effect": "Gain the Alarm Quick Tech action.",
+    "actions": [
+      {
+        "name": "Alarm",
+        "activation": "Quick Tech",
+        "detail": "Make a tech attack. On a success, the target emits noise, making it impossible for it to become Hidden."
+      }
+    ],
+    "license": "MEDJAY"
+  },
+  {
+    "id": "ebs_sys_capture_drone",
+    "name": "Capture Drone",
+    "source": "EBS",
+    "license_id": "ebs_frame_medjay",
+    "license_level": 2,
+    "type": "Drone",
+    "sp": 3,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      }
+    ],
+    "effect": "Deploy a Capture Drone as a Quick Tech. Gain the Seize Quick Tech action.",
+    "deployables": [
+      {
+        "name": "Capture Drone",
+        "type": "Drone",
+        "size": 0.5,
+        "hp": 10,
+        "evasion": 10,
+        "edef": 10,
+        "activation": "Quick Tech",
+        "detail": "A drone built to latch onto and hold targets in place.",
+        "cost": 1
+      }
+    ],
+    "actions": [
+      {
+        "name": "Seize",
+        "activation": "Quick Tech",
+        "detail": "Make a tech attack. On a success, the target cannot move out of adjacency with the Capture Drone. A Seized target can be dragged at half speed if the drone passes a Hull Save."
+      }
+    ],
+    "license": "MEDJAY"
+  },
+  {
+    "id": "ebs_sys_interdiction",
+    "name": "Interdiction",
+    "source": "EBS",
+    "license_id": "ebs_frame_medjay",
+    "license_level": 3,
+    "type": "Tech",
+    "sp": 3,
+    "effect": "Gain the Interdiction Full Tech action.",
+    "actions": [
+      {
+        "name": "Interdiction",
+        "activation": "Full Tech",
+        "detail": "The MEDJAY focuses on the sensors of comrades on the battlefield. Until the start of its next turn, while using a weapon with the Arcing tag, the MEDJAY can make Overwatch attacks using its allies' Threat."
+      }
+    ],
+    "license": "MEDJAY"
+  },
+  {
+    "id": "ebs_sys_geometric_calculation_assist",
+    "name": "Geometric Calculation Assist",
+    "source": "EBS",
+    "license_id": "ebs_frame_marmetine",
+    "license_level": 1,
+    "sp": 1,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 3
+      }
+    ],
+    "effect": "As a Quick Action, gain Aiming for weapons with the Arcing tag.",
+    "actions": [
+      {
+        "name": "Geometric Calculation Assist",
+        "activation": "Quick",
+        "detail": "Gain Aiming for weapons with the Arcing tag.",
+        "cost": 1
+      }
+    ],
+    "license": "MARMETINE"
+  },
+  {
+    "id": "ebs_sys_fear_module",
+    "name": "FEAR Module",
+    "source": "EBS",
+    "license_id": "ebs_frame_marmetine",
+    "license_level": 2,
+    "type": "Tech",
+    "sp": 3,
+    "effect": "Gain the Dominance and Subversion Quick Tech actions.",
+    "actions": [
+      {
+        "name": "Dominance",
+        "activation": "Quick Tech",
+        "detail": "Gain +1 Accuracy when attacking a character that is already suffering Difficulty on attacks."
+      },
+      {
+        "name": "Subversion",
+        "activation": "Quick Tech",
+        "detail": "Inflict +1 Difficulty on a character already suffering Difficulty, until the end of its next turn."
+      }
+    ],
+    "license": "MARMETINE"
+  },
+  {
+    "id": "ebs_sys_redundant_utility_drone",
+    "name": "Redundant Utility Drone",
+    "source": "EBS",
+    "license_id": "ebs_frame_marmetine",
+    "license_level": 3,
+    "type": "Drone",
+    "sp": 3,
+    "tags": [
+      {
+        "id": "tg_limited",
+        "val": 1
+      }
+    ],
+    "effect": "This drone can be used to restore a system the MARMETINE has lost due to Structure Damage. This does not return any Structure. The effect lasts for 1 Scene.",
+    "license": "MARMETINE"
+  }
+]

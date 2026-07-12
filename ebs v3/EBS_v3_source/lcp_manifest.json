@@ -1,0 +1,28 @@
+{
+  "name": "Eschaton Brigade Solutions",
+  "author": "Alexander Layton (Eschatonius)",
+  "item_prefix": "ebs",
+  "description": "Adds the Eschaton Brigade Solutions (EBS) manufacturer and seven new frames: GALLOWGLASS, VARANGI, PURBIYA, MYROI, IKKI, MEDJAY, and MARMETINE. <i>\"When a whole world is against you, end it.\"</i>",
+  "version": "2.0.0",
+  "v3": true,
+  "version_history": [
+    {
+      "version": "1.0.0",
+      "date": "2026-07-12",
+      "changes": [
+        "Initial release: EBS manufacturer, 7 frames with art, full license trees."
+      ]
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-07-12",
+      "changes": [
+        "Updated for COMP/CON v3.",
+        "Weapon on-attack/on-hit/on-crit effects converted to v3 Effect Objects with save, status, and damage automation.",
+        "Grenades, mines, and tech actions carry structured damage/status data for Active Mode automation.",
+        "Removed deprecated v2 action fields.",
+        "Added license display names to all licensed equipment."
+      ]
+    }
+  ]
+}

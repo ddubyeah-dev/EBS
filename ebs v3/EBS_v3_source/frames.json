@@ -1,0 +1,396 @@
+[
+  {
+    "id": "ebs_frame_gallowglass",
+    "license_level": 2,
+    "source": "EBS",
+    "name": "GALLOWGLASS",
+    "mechtype": [
+      "Striker"
+    ],
+    "description": "The GALLOWGLASS is the EBS line striker: a stubborn duelist chassis built around a hardlight construct printer that arms its pilot with whatever the battle demands.",
+    "mounts": [
+      "Aux/Aux",
+      "Main",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 1,
+      "hp": 12,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 4,
+      "sensor_range": 10,
+      "tech_attack": -1,
+      "save": 10,
+      "speed": 5,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Diehard",
+        "description": "The GALLOWGLASS does not become Impaired after suffering a Glancing Blow from Structure Damage and does not become Stunned when it has 3+ Structure and suffers a Direct Hit."
+      }
+    ],
+    "core_system": {
+      "name": "Hardlight Construct Printer",
+      "passive_name": "The Sun's Treasure",
+      "passive_effect": "(Protocol, 1/Scene) Construct a weapon from hard light. You must have the license for the weapon but must not have it equipped. It can be used for a single attack before the hard light dissipates. This weapon does not require an open mount to use but it must be a weapon that could be mounted on one of the mounts of the GALLOWGLASS.",
+      "passive_actions": [
+        {
+          "name": "The Sun's Treasure",
+          "activation": "Protocol",
+          "frequency": "1/scene",
+          "detail": "Construct a weapon from hard light. You must have the license for the weapon but must not have it equipped. It can be used for a single attack before the hard light dissipates. This weapon does not require an open mount to use but it must be a weapon that could be mounted on one of the mounts of the GALLOWGLASS."
+        }
+      ],
+      "active_name": "The Vault Opens",
+      "activation": "Protocol",
+      "use": "Scene",
+      "active_effect": "As The Sun's Treasure, except the hard light weapon lasts for the remainder of the Scene. Take 1 Heat when it is used to attack."
+    },
+    "image_url": "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9kOWZlZjI0NjJlMzkyNzliL0lRUTZ6OHFIekFpNFJZcVc4SnhORUEwMUFlMjZ5ejJjQml4bmNadHQ4bU95V0dv/root/content"
+  },
+  {
+    "id": "ebs_frame_varangi",
+    "license_level": 2,
+    "source": "EBS",
+    "name": "VARANGI",
+    "mechtype": [
+      "Defender"
+    ],
+    "description": "A towering EBS bulwark chassis, the VARANGI anchors the line, sheltering its lance behind reactive plate and an iron arm.",
+    "mounts": [
+      "Aux",
+      "Main",
+      "Heavy"
+    ],
+    "stats": {
+      "size": 2,
+      "structure": 4,
+      "stress": 4,
+      "armor": 2,
+      "hp": 12,
+      "evasion": 6,
+      "edef": 10,
+      "heatcap": 6,
+      "repcap": 5,
+      "sensor_range": 10,
+      "tech_attack": -1,
+      "save": 8,
+      "speed": 4,
+      "sp": 8
+    },
+    "traits": [
+      {
+        "name": "Guardian",
+        "description": "Adjacent allies can use the VARANGI as hard cover."
+      },
+      {
+        "name": "Long Reach",
+        "description": "The VARANGI increases the Threat of all Melee Weapons by 1."
+      },
+      {
+        "name": "Slow",
+        "description": "The VARANGI has +1 Difficulty on Agility checks."
+      }
+    ],
+    "core_system": {
+      "name": "Iron Arm",
+      "passive_name": "Iron Arm",
+      "passive_effect": "When the VARANGI is adjacent to an ally it gains 2 Armor (this can exceed the maximum of 4 Armor).",
+      "active_name": "Iron Arm Protocol",
+      "activation": "Protocol",
+      "use": "Scene",
+      "active_effect": "The VARANGI grants 2 Armor to itself and allies within Threat until the end of the scene."
+    },
+    "image_url": "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9kOWZlZjI0NjJlMzkyNzliL0lRU0FkTW5SdUlsLVNMVExScFNCRnIzUUFkc3ZoYm92Q1VLSHRQM19nalF2c0Nv/root/content"
+  },
+  {
+    "id": "ebs_frame_purbiya",
+    "license_level": 2,
+    "source": "EBS",
+    "name": "PURBIYA",
+    "mechtype": [
+      "Striker"
+    ],
+    "description": "A light, hypertuned EBS striker that hunts alongside its inseparable feline drone, the PROWLER.",
+    "mounts": [
+      "Heavy",
+      "Main/Aux"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 10,
+      "edef": 12,
+      "heatcap": 6,
+      "repcap": 4,
+      "sensor_range": 10,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 6,
+      "sp": 8
+    },
+    "traits": [
+      {
+        "name": "Hypertuned",
+        "description": "The PURBIYA gains +1 Advantage on saves against Slow effects."
+      },
+      {
+        "name": "Fell Hunter",
+        "description": "The PURBIYA does +1d6 damage to deployables."
+      },
+      {
+        "name": "Only I Get One",
+        "description": "The PURBIYA grants its deployables within Sensors Overshield equal to Grit."
+      },
+      {
+        "name": "Codependent Power Banks",
+        "description": "While the PROWLER is destroyed the PURBIYA has +1 Disadvantage on all d20 rolls."
+      }
+    ],
+    "core_system": {
+      "name": "PROWLER Drone",
+      "passive_name": "PROWLER",
+      "passive_effect": "The PURBIYA is always accompanied by a feline drone, the PROWLER.",
+      "deployables": [
+        {
+          "name": "PROWLER",
+          "type": "Drone",
+          "size": 0.5,
+          "hp": 8,
+          "heatcap": 6,
+          "evasion": 12,
+          "edef": 12,
+          "redeploy": "Full",
+          "detail": "Feline drone companion. Plasma Claws (Main Melee): 1d3+3 Energy, attacks at 1d20 + Grit."
+        }
+      ],
+      "active_name": "Direct PROWLER",
+      "activation": "Protocol",
+      "active_effect": "The PURBIYA can indicate an enemy within Sensors for the PROWLER to attack. The PROWLER will attack that enemy until the target is destroyed or given a different target. The Power Cycle die tracks the PROWLER's attack upgrades."
+    },
+    "image_url": "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9kOWZlZjI0NjJlMzkyNzliL0lRU001WldNN0llNlFJb1dlRE02eG9tQkFWY3plMXJhRkZvanZoVzJybWt3RC1N/root/content"
+  },
+  {
+    "id": "ebs_frame_myroi",
+    "license_level": 2,
+    "source": "EBS",
+    "name": "MYROI",
+    "mechtype": [
+      "Controller",
+      "Support"
+    ],
+    "description": "A massive EBS command platform that prints and directs legions of subalterns — the 10,000 — across the battlefield.",
+    "mounts": [
+      "Main",
+      "Aux/Aux"
+    ],
+    "stats": {
+      "size": 3,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 10,
+      "evasion": 6,
+      "edef": 8,
+      "heatcap": 6,
+      "repcap": 8,
+      "sensor_range": 15,
+      "tech_attack": 0,
+      "save": 10,
+      "speed": 8,
+      "sp": 12
+    },
+    "traits": [
+      {
+        "name": "Field Officer",
+        "description": "1/Round the MYROI can Activate a deployable as a Protocol."
+      },
+      {
+        "name": "Micronet",
+        "description": "Subalterns equipped by the MYROI can use weapons mounted on the MYROI as if they had the Turret System. The Subaltern Squad must still be jockeying the MYROI."
+      }
+    ],
+    "core_system": {
+      "name": "10,000 Printer",
+      "passive_name": "Print 10,000",
+      "passive_effect": "Gain Protocol — Print 10,000 (Limited 4): The MYROI can print a team of unique subalterns known as the 10,000.",
+      "passive_actions": [
+        {
+          "name": "Print 10,000",
+          "activation": "Protocol",
+          "detail": "(Limited 4) The MYROI prints a team of unique subalterns known as the 10,000."
+        }
+      ],
+      "active_name": "SARGENT Comp/Con",
+      "activation": "Protocol",
+      "use": "Scene",
+      "active_effect": "Print a set of 10,000 with 2 optional tags, managed by a SARGENT Comp/Con. They act on the MYROI's turn, then explode in Burst 1 for 5 Energy AP when depleted or when the scene ends."
+    },
+    "image_url": "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9kOWZlZjI0NjJlMzkyNzliL0lRUWxBaDJJdmhBbFJxc0I1aVgxVS1EWUFkN2V1eWpoSzZsdHgzZnlkOGxyVFBF/root/content"
+  },
+  {
+    "id": "ebs_frame_ikki",
+    "license_level": 2,
+    "source": "EBS",
+    "name": "IKKI",
+    "mechtype": [
+      "Support"
+    ],
+    "description": "A slim EBS support frame whose entropy drive spreads pain across the lance, converting suffering into staying power.",
+    "mounts": [
+      "Main"
+    ],
+    "stats": {
+      "size": 0.5,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 8,
+      "edef": 10,
+      "heatcap": 5,
+      "repcap": 2,
+      "sensor_range": 20,
+      "tech_attack": 2,
+      "save": 12,
+      "speed": 5,
+      "sp": 8
+    },
+    "traits": [
+      {
+        "name": "Energy Conversion Coils",
+        "description": "1/Round the IKKI can attempt a Hull Save when suffering Transferred damage or a Tech Save when suffering Transferred heat. If successful, the IKKI gains Resistance to the damage."
+      },
+      {
+        "name": "Slim Profile",
+        "description": "The IKKI gains the Hard Cover bonus from Soft Cover."
+      }
+    ],
+    "core_system": {
+      "name": "Entropy Drive",
+      "active_name": "Pain Dispersion Network",
+      "activation": "Protocol",
+      "use": "Scene",
+      "active_effect": "When allies within Sensors of the IKKI suffer damage, the IKKI can Transfer some of that damage to other allies within Sensors — splitting the damage or heat as evenly as possible. Without Energy Conversion Coils this damage cannot be Resisted or reduced in any way. This effect lasts for 1 Scene."
+    },
+    "image_url": "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9kOWZlZjI0NjJlMzkyNzliL0lRU3VpQWhJbHRiMlNxbHdCaWNSWHFUa0FmWF9FYm5DVGhMa0FEVnFHcGd0a18w/root/content"
+  },
+  {
+    "id": "ebs_frame_medjay",
+    "license_level": 2,
+    "source": "EBS",
+    "name": "MEDJAY",
+    "mechtype": [
+      "Controller"
+    ],
+    "description": "An EBS controller chassis built around a javelin printer, raining arcing munitions along non-Euclidian firing solutions.",
+    "mounts": [
+      "Main",
+      "Aux"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 1,
+      "hp": 8,
+      "evasion": 6,
+      "edef": 10,
+      "heatcap": 5,
+      "repcap": 4,
+      "sensor_range": 15,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 5,
+      "sp": 8
+    },
+    "traits": [
+      {
+        "name": "Non-Euclidian Geometric Interface",
+        "description": "The MEDJAY gains +1 Advantage on attacks with weapons that have the Arcing tag."
+      },
+      {
+        "name": "Pack Mentality",
+        "description": "Allies in line of sight and Sensors receive +1 on Agility Saves."
+      }
+    ],
+    "core_system": {
+      "name": "Javelin Printer",
+      "passive_name": "Javelin Printer",
+      "passive_effect": "Core Integrated Weapon: Javelin — Range 10, 1d6 Kinetic, Arcing. Can produce specialty javelins (Radio, Relay, Crackdown, Lockup).",
+      "integrated": [
+        "ebs_wep_javelin"
+      ],
+      "active_name": "Javelin Hail Volt",
+      "activation": "Full",
+      "use": "Scene",
+      "active_effect": "Range 15: create three Burst 2 fields of dangerous terrain, dealing 2 Energy AP and 1 Heat on failed Engineering checks. The fields persist for 1 Scene."
+    },
+    "image_url": "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9kOWZlZjI0NjJlMzkyNzliL0lRUXAxTV9McWduT1FJOVpBZXg4aXV5MEFlc0UzbUZNcjBYa0dsSG5SbmotRW5n/root/content"
+  },
+  {
+    "id": "ebs_frame_marmetine",
+    "license_level": 2,
+    "source": "EBS",
+    "name": "MARMETINE",
+    "mechtype": [
+      "Artillery",
+      "Controller"
+    ],
+    "description": "A regal EBS artillery-controller whose crowned silhouette commands the field: to strike at it is to invite paralysis.",
+    "mounts": [
+      "Heavy",
+      "Main",
+      "Aux"
+    ],
+    "stats": {
+      "size": 1,
+      "structure": 4,
+      "stress": 4,
+      "armor": 0,
+      "hp": 8,
+      "evasion": 8,
+      "edef": 8,
+      "heatcap": 8,
+      "repcap": 4,
+      "sensor_range": 15,
+      "tech_attack": 1,
+      "save": 10,
+      "speed": 5,
+      "sp": 6
+    },
+    "traits": [
+      {
+        "name": "Lordly Raiment",
+        "description": "+1 Accuracy to a single d20 roll 1/Round."
+      },
+      {
+        "name": "Sovereign's Gaze",
+        "description": "1/Round the MARMETINE can Scan as a Free Action. A character can only be scanned in this way 1/Scene."
+      },
+      {
+        "name": "Complex Design",
+        "description": "The MARMETINE must spend 2 repairs to repair a destroyed system during rests instead of 1."
+      }
+    ],
+    "core_system": {
+      "name": "The Crown",
+      "passive_name": "Presence",
+      "passive_effect": "Tech Attacks made against the MARMETINE within its Sensor range are made with +1 Difficulty.",
+      "active_name": "Halo",
+      "activation": "Protocol",
+      "use": "Scene",
+      "active_effect": "Attacks and tech attacks made against the MARMETINE within its Sensor range are made with +1 Difficulty. If the attack or tech attack fails, the attacker is Immobilized (1/Scene per character)."
+    },
+    "image_url": "https://api.onedrive.com/v1.0/shares/u!aHR0cHM6Ly8xZHJ2Lm1zL2kvYy9kOWZlZjI0NjJlMzkyNzliL0lRUUF5U3RHUlR1eVI0MkFxcUVhd2tOUEFkZXVNckt5QU4wcS1QaWJVMEl0aDdJ/root/content"
+  }
+]
